@@ -41,6 +41,7 @@ async function createPreviewImage(
   try {
     try {
       const cachedPreviewImage = await db.get(cacheKey)
+      console.info('cachedPreviewImage', cacheKey, cachedPreviewImage);
       if (cachedPreviewImage) {
         return cachedPreviewImage
       }
